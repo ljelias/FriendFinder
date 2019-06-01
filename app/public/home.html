@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>FriendFinder</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="box2">
+            <div class="leftside">
+                <h3>WELCOME!</h3>
+                <h1><em>Friend Finder Central</em></h1>
+                <h3>Find friends with similar traits and interests.</h3>
+            </div>
+            <div>
+                <a href="survey.html">
+                    <h4 class="w3-btn w3-block w3-light-gray" id="surveylink">Take our survey to find<br><b>your</b>
+                        most compatible friends!</h4>
+                </a>
+            </div>
+        </header>
+
+        <div class="box2">
+            <div class="leftside" id="previewpicker">
+                <h2 style="text-align:right">View some friends<br>from our current roster...</h2>
+            </div>
+            <div class="w3-content w3-display-container" id="slideshow">
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Bright Eyes</h4>
+                        <p>Highly observant cat</p>
+                    </div>
+                    <div>
+                        <img src="../data/bright_eyes.jpg" , alt="bright-eyes" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Donkey</h4>
+                        <p>Best friend of Shrek</p>
+                    </div>
+                    <div>
+                        <img src="../data/donkey_shrek.jpg" , alt="donkey" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Edna Mode</h4>
+                        <p>Super costume designer</p>
+                    </div>
+                    <div>
+                        <img src="../data/edna_mode.jpg" , alt="edna" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>John Doe</h4>
+                        <p>An average joe</p>
+                    </div>
+                    <div>
+                        <img src="../data/john_doe.png" , alt="john" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Mickey Mouse</h4>
+                        <p>The original fun guy</p>
+                    </div>
+                    <div>
+                        <img src="../data/mickey_mouse.jpg" , alt="mickey" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Paul Bunyan</h4>
+                        <p>Can chop really big trees</p>
+                    </div>
+                    <div>
+                        <img src="../data/paul_bunyan.jpg" , alt="paul" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Rock Monster</h4>
+                        <p>Super old</p>
+                    </div>
+                    <div>
+                        <img src="../data/rock_monster.jpg" , alt="rock-monster" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Squidward Tentacles</h4>
+                        <p>Average grumpy neighbor</p>
+                    </div>
+                    <div>
+                        <img src="../data/squidward_tentacles.jpg" , alt="squidward" class="preview">
+                    </div>
+                </div>
+                <div class="friendcard w3-light-gray w3-card-4">
+                    <div class="left">
+                        <h4>Tinkerbell</h4>
+                        <p>Loves to flit and fly</p>
+                    </div>
+                    <div>
+                        <img src="../data/tinkerbell.jpg" , alt="tinkerbell" class="preview">
+                    </div>
+                </div>
+
+                <button class="w3-button w3-display-left" id="button1" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right" id="button2" onclick="plusDivs(+1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("friendcard");
+        if (n > x.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = x.length };
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+    </script>
+
+</body>
+
+</html>

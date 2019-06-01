@@ -1,0 +1,62 @@
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    .box2,
+    #results {
+        margin: 20px 0px;
+        padding: 20px 4vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(228, 247, 217);
+        border-radius: 6px;
+    }
+
+    #surveylink,
+    #begin {
+        border: 1px dotted gray;
+        border-radius: 6px;
+        padding: 15px 35px;
+    }
+
+    .leftside {
+        min-width: 320px;
+    }
+
+    .friendcard {
+        padding: 20px 50px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        align-content: space-around;
+        border-radius: 5px;
+    }
+
+    .preview,
+    .newfriend {
+        max-height: 200px;
+    }
+
+    .friendresult {
+        padding: 15px 25px;
+    }
+
+    .rank {
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    form p {
+        margin-bottom: 0;
+    }
+
+    #submit {
+        margin-top: 12px;
+    }

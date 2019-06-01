@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>FriendSurvey</title>
+</head>
+
+<body>
+    <div class="container">
+        <header class="box2">
+            <div class="leftside">
+                <h3>WELCOME!</h3>
+                <h1><em>Friend Finder Survey</em></h1>
+                <h3>Take our matching survey here!!</h3>
+            </div>
+            <div>
+                <a href="home.html">
+                    <h4 class="w3-btn w3-block w3-light-gray" id="surveylink">Back to home page to view<br>some of our
+                        current friends.</h4>
+                </a>
+            </div>
+        </header>
+
+        <div class="box2">
+            <div class="leftside" id="survey" style="align-self:top">
+                <h3 class="w3-btn w3-block w3-light-gray" id="begin"><em>Begin Survey!!</em></h3>
+                <div id="questions">
+                    <form > <!--action="" method=""-->
+                        <h6>INSTRUCTIONS: Rank each item from 1 (lowest) to 5 (highest).</h6>
+                        <label for="name">Your name:</label>
+                        <input type="text" name="name" class="textbox" id="name" required="required">
+                        <br><br>
+                        <label for="name">Link to your photo:</label>
+                        <input type="text" name="photo" class="textbox" id="photolink" required="required">
+                        <br>
+                        <section>
+                            <p>1: Do you like chocolate?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q1">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q1">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q1">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q1">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q1">
+                        </section>
+
+                        <section>
+                            <p>2. How well do you speak a second language? (5=fluent, 1=none)</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q2">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q2">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q2">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q2">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q2">
+                        </section>
+
+                        <section>
+                            <p>3. Do you like to sing?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q3">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q3">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q3">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q3">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q3">
+                        </section>
+                        <section>
+                            <p>4. Are you an early riser or a night owl? (5=very early, 1=very late)
+                            </p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q4">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q4">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q4">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q4">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q4">
+                        </section>
+                        <section>
+                            <p>5. Do you like cats?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q5">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q5">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q5">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q5">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q5">
+                        </section>
+                        <section>
+                            <p>6. Do you like naps?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q6">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q6">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q6">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q6">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q6">
+                        </section>
+                        <section>
+                            <p>7. Can you swim?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q7">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q7">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q7">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q7">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q7">
+                        </section>
+                        <section>
+                            <p>8. Do you enjoy outdoor activities such as camping and hiking?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q8">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q8">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q8">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q8">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q8">
+                        </section>
+                        <section>
+                            <p>9. Can you whistle?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q9">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q9">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q9">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q9">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q9">
+                        </section>
+                        <section>
+                            <p>10. Are you good at climibing trees?</p>
+                            <label for="1" class="rank">1</label><input type="radio" value="1" name="q10">
+                            <label for="2" class="rank">2</label><input type="radio" value="2" name="q10">
+                            <label for="3" class="rank">3</label><input type="radio" value="3" name="q10">
+                            <label for="4" class="rank">4</label><input type="radio" value="4" name="q10">
+                            <label for="5" class="rank">5</label><input type="radio" value="5" name="q10">
+                        </section>
+
+                        <button class="w3-grey w3-btn" type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="resultsheader">
+                        <h2 style="text-align:center">Your Top Matches...</h2>
+                </div>
+            </div>
+        </div>
+        <div id="results">
+                <h3 style="text-align:right"></h3>
+                <div class="friendresult w3-light-gray w3-card-4">
+                    <div class="friendname">
+                        <h4>Paul Bunyan</h4>
+                        <p>info</p>
+                    </div>
+                    <div>
+                        <img src="../data/paul_bunyan.jpg" , alt="paul" class="newfriend">
+                    </div>
+                </div>
+        </div>
+    </div>
+<script>
+$(document).ready(function () {
+    //hide questions, finish button, results div
+    $('#questions').hide();
+    $('#submit').hide();
+    $('#results').hide();
+    $('#resultsheader').hide();
+    
+    $('#begin').on('click', function() {
+            $(this).hide();
+            showQs();
+    });
+});
+    
+//show questions and submit button
+function showQs() {
+    $('#questions').show();
+    $('#submit').show();
+}
+
+
+$('#submit').on('click', function(event) {
+    event.preventDefault();
+    var newUser = {
+        newName: $("#name").val().trim(),
+     // newPhoto: $("#photolink").val().trim(),
+        ansArray: [ 
+            $("input[name='q1']:checked").val(),
+            $("input[name='q2']:checked").val(),
+            $("input[name='q3']:checked").val(),
+            $("input[name='q4']:checked").val(),
+            $("input[name='q5']:checked").val(),
+            $("input[name='q6']:checked").val(),
+            $("input[name='q7']:checked").val(),
+            $("input[name='q8']:checked").val(),
+            $("input[name='q9']:checked").val(),
+            $("input[name='q10']:checked").val()]
+        };
+    console.log(newUser);
+    $('#submit').hide();
+
+});
+
+
+//$.post("/api/friends", newUser, function(data) {
+   
+//});
+
+/*
+
+    function wrapup () {
+        $('#questions').hide();
+        $('#submit').hide();
+        $('#resultsheader').show();
+        $('#results').show();    
+    }
+
+
+*/
+
+
+</script>
+</body>
+
+</html>
